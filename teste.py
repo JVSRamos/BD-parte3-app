@@ -1,5 +1,6 @@
 import psycopg2
 
+con = None
 try:
     con = psycopg2.connect(user="postgres",
                            password="ribamar",

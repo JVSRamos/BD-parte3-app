@@ -1,1 +1,0 @@
--- File used for constructing the database structure (tables' schema).
