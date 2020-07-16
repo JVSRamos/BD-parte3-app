@@ -4,7 +4,7 @@ FROM postgres
 USER postgres
 
 ENV POSTGRES_PASSWORD ribamar
-ENV POSTGRES_DB bd_mudanca 
+ENV POSTGRES_DB bd_mudanca
 
 COPY init_sql/*.sql /docker-entrypoint-initdb.d/
 
