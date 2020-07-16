@@ -33,6 +33,9 @@ INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIME
 -- Carlos Bife (Prestador)
 INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL, EH_PRESTADOR, EH_LOCADOR, EH_VENDEDOR)
     VALUES ('48121548421', 'carlosbife@hotmail.com', '2010-01-30 23:04:59-03', 'Carlos Bife', '19855515658', '4/22/1982', 'truco','./photos/bife.jpeg', 2.55, TRUE, FALSE, FALSE);
+-- Jorjão Montador (Prestador, Locador, Vendedor)
+INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL, EH_PRESTADOR, EH_LOCADOR, EH_VENDEDOR)
+    VALUES ('22222222222', 'jorjao_mont@uol.com', '2009-05-24 23:04:59-03', 'Jorjão Montador', '19866614557', '4/2/1968', 'truco','./photos/jorjao_montador.jpeg', 2.55, TRUE, TRUE, TRUE);
 
 -- AVALIACAO
 -- Cliente (X) Negociante: direcao da avaliacao definida pelo booleano "VEM_DO_CLIENTE" 
@@ -104,90 +107,179 @@ INSERT INTO IMOVEL (RUA, NUMERO, COMPLEMENTO, BAIRRO, CEP, CIDADE, LOCADOR, EH_P
 INSERT INTO IMOVEL (RUA, NUMERO, COMPLEMENTO, BAIRRO, CEP, CIDADE, LOCADOR, EH_PROPRIETARIO, PRECO, AREA, NRO_QUARTOS, NRO_SALAS, NRO_BANHEIROS, DESCRICAO_GERAL)
     VALUES ('Rua Episcopal', 2220, NULL, 'Centro', '11111111', 'Sao Carlos','48487098819', FALSE, 600.0, 108.9, 4, 2, 2, 'Nova Republica Saint Charles: Casa com bastante espaço, 4 quartos com um cachorro, o flasco #MoreEmRep');
 
-
 -- FOTO_IMOVEL
+-- Formato do Path (./photos/imovel/[idimovel].[numero_foto]) 
 
 INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
-    VALUES (1,'.\photos/imovel/1.1');
+    VALUES (1,'./photos/imovel/1.1');
 
 INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
-    VALUES (1,'.\photos/imovel/1.2');
+    VALUES (1,'./photos/imovel/1.2');
 
 INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
-    VALUES (1,'.\photos/imovel/1.3');
+    VALUES (1,'./photos/imovel/1.3');
 
 INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
-    VALUES (2,'.\photos/imovel/2.1');
+    VALUES (2,'./photos/imovel/2.1');
 
 INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
-    VALUES (2,'.\photos/imovel/2.2');
+    VALUES (2,'./photos/imovel/2.2');
 
 INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
-    VALUES (2,'.\photos/imovel/2.3');
+    VALUES (2,'./photos/imovel/2.3');
 
 INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
-    VALUES (2,'.\photos/imovel/2.4');
+    VALUES (2,'./photos/imovel/2.4');
 
 INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
-    VALUES (3,'.\photos/imovel/3.1');
+    VALUES (3,'./photos/imovel/3.1');
 
 INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
-    VALUES (3,'.\photos/imovel/3.2');
+    VALUES (3,'./photos/imovel/3.2');
 
--- ALUGUEL 
+INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+    VALUES (4,'./photos/imovel/4.1');
+
+INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+    VALUES (4,'./photos/imovel/4.2');
+
+INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+    VALUES (4,'./photos/imovel/4.3');
+
+INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+    VALUES (5,'./photos/imovel/5.1');
+
+INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+    VALUES (5,'./photos/imovel/5.2');
+
+INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+    VALUES (5,'./photos/imovel/5.3');
+
+INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+    VALUES (5,'./photos/imovel/5.4');
+
+INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+    VALUES (5,'./photos/imovel/5.5');
+
+-- ALUGUEL
+
 -- Giovani alugando APARTAMENTO de Marcelo (proprietario)
 INSERT INTO ALUGUEL (CLIENTE, ID_IMOVEL, DATA_INICIO, DATA_TERMINO, DURACAO, DESCRICAO, CUSTO_RESCISAO_INTEGRAL) 
-    VALUES ('46975897859', 1, '2018-10-01 07:12:10-03', '2019-10-01 07:12:10-03','P1Y', 'Aluguel - Minimo 1 ano de aluguel - 900 reais/mes incluso gás',10800.0)
+    VALUES ('46975897859', 1, '2018-10-01 07:12:10-03', '2019-10-01 07:12:10-03','P1Y', 'Aluguel - Minimo 1 ano de aluguel - 900 reais/mes incluso gás',10800.0);
 -- Craque Neto alugando APARTAMENTO de Carlos Bife (proprietario)
 INSERT INTO ALUGUEL (CLIENTE, ID_IMOVEL, DATA_INICIO, DATA_TERMINO, DURACAO, DESCRICAO, CUSTO_RESCISAO_INTEGRAL) 
-    VALUES ('11111111111', 2, '2018-02-02 04:05:05-03', '2019-12-02 05:05:05-03','P1Y10MT1H', 'Aluguel - Minimo 1 ano de aluguel - 900 reais/mes incluso gás',10800.0)
+    VALUES ('11111111111', 2, '2018-02-02 04:05:05-03', '2019-12-02 05:05:05-03','P1Y10MT1H', 'Aluguel - Minimo 1 ano de aluguel - 900 reais/mes incluso gás',10800.0);
 -- Joao alugando APARTAMENTO de Kazalbe (proprietario)
 INSERT INTO ALUGUEL (CLIENTE, ID_IMOVEL, DATA_INICIO, DATA_TERMINO, DURACAO, DESCRICAO, CUSTO_RESCISAO_INTEGRAL) 
-    VALUES ('48487098819', 2, '2018-02-02 04:05:05-03', '2019-12-02 05:05:05-03','P1Y10MT1H', 'Aluguel - Minimo 1 ano de aluguel - 900 reais/mes incluso gás',10800.0)
+    VALUES ('48487098819', 2, '2018-02-02 04:05:05-03', '2019-12-02 05:05:05-03','P1Y10MT1H', 'Aluguel - Minimo 1 ano de aluguel - 900 reais/mes incluso gás',10800.0);
 
 -- VAGA
 
+-- Craque Neto anunciando Vaga[1] do APARTAMENTO que alugou de Carlos Bife
 INSERT INTO VAGA (ID_IMOVEL, NUMERO_VAGA, DESCRICAO, PRECO)
-    VALUES()
+    VALUES(2, 1, 'Primeiro quarto à esquerda no corredor principal - possui uma cama', 340.0);
+-- Craque Neto anunciando Vaga[2] do APARTAMENTO que alugou de Carlos Bife
+INSERT INTO VAGA (ID_IMOVEL, NUMERO_VAGA, DESCRICAO, PRECO)
+    VALUES(2, 2, 'Primeiro quarto à direita no corredor principal - possui uma cama e um armario', 360.0);
+-- Joao anunciando Vaga[1] da CASA que alugou de Kazalbe
+INSERT INTO VAGA (ID_IMOVEL, NUMERO_VAGA, DESCRICAO, PRECO)
+    VALUES(3, 1, 'Quarto localizado na parte externa da casa, perto da chorrasqueira', 600.0);
+-- Joao anunciando Vaga[2] da CASA que alugou de Kazalbe
+INSERT INTO VAGA (ID_IMOVEL, NUMERO_VAGA, DESCRICAO, PRECO)
+    VALUES(3, 2, 'Quarto localizado na parte interna da casa, perto da cozinha', 600.0);
 
 -- FOTO_VAGA
+-- Formato do Path (./photos/vaga/[idimovel].[numerovaga].[numero_foto])
 
+--Imovel[2] - Vaga[1] - 2 fotos
 INSERT INTO FOTO_VAGA ( ID_IMOVEL, NUMERO_VAGA, PATH_FOTO)
-    VALUES()
+    VALUES(2,1,'./photos/vaga/2.1.1');
+INSERT INTO FOTO_VAGA ( ID_IMOVEL, NUMERO_VAGA, PATH_FOTO)
+    VALUES(2,1,'./photos/vaga/2.1.2');
+
+--Imovel[2] - Vaga[2] - 2 fotos
+INSERT INTO FOTO_VAGA ( ID_IMOVEL, NUMERO_VAGA, PATH_FOTO)
+    VALUES(2,2,'./photos/vaga/2.2.1');
+INSERT INTO FOTO_VAGA ( ID_IMOVEL, NUMERO_VAGA, PATH_FOTO)
+    VALUES(2,2,'./photos/vaga/2.2.2');
+
+-- Imovel[3] - Vaga[1] - 3 fotos
+INSERT INTO FOTO_VAGA ( ID_IMOVEL, NUMERO_VAGA, PATH_FOTO)
+    VALUES(3,1,'./photos/vaga/2.1.1');
+INSERT INTO FOTO_VAGA ( ID_IMOVEL, NUMERO_VAGA, PATH_FOTO)
+    VALUES(3,1,'./photos/vaga/3.1.2');
+INSERT INTO FOTO_VAGA ( ID_IMOVEL, NUMERO_VAGA, PATH_FOTO)
+    VALUES(3,1,'./photos/vaga/3.1.3');
+
+-- Imovel[3] - Vaga[1] - 1 foto
+INSERT INTO FOTO_VAGA ( ID_IMOVEL, NUMERO_VAGA, PATH_FOTO)
+    VALUES(3,2,'./photos/vaga/3.2.1');
 
 -- ACORDO
 
+-- Vitor alugando VAGA [1] de Craque Neto
 INSERT INTO ACORDO ( CLIENTE, ID_IMOVEL, NUMERO_VAGA, DATA_INICIO, DATA_TERMINO, DURACAO, TERMOS, CUSTO_RECISAO_ORIGINAL)
-    VALUES()
+    VALUES('49061357810', 3 , 1, '2019-12-02 01:01:01-03', '2020-01-02 01:01:01-03', 'P1M' ,'Manter a limpeza do proprio quarto e respeitar as regras da republica', NULL);
+-- Marcelo alugando VAGA [2] de Craque Neto
+INSERT INTO ACORDO ( CLIENTE, ID_IMOVEL, NUMERO_VAGA, DATA_INICIO, DATA_TERMINO, DURACAO, TERMOS, CUSTO_RECISAO_ORIGINAL)
+    VALUES('47495856882', 3 , 2, '2020-01-01 01:01:01-03', '2020-03-11 01:01:01-03', 'P2M10D' ,'Manter a limpeza do proprio quarto, respeitar as regras da republica e acima de tudo que o alcool esteja com voce', NULL); 
 
 -- PRESTADOR_SERVICO
+-- Jorjao, Marcelo e Carlos Bife
 
+--Jorjao cadastrado como prestador
 INSERT INTO PRESTADOR_SERVICO ( NEGOCIANTE, CNH, EH_MONTADOR, TEMPO_EXP_MONT, TEMPO_EXP_TRANSP)
-    VALUES()
+    VALUES('22222222222', NULL, TRUE, 'P20Y' , NULL);
+
+--Marcelo cadastrado como prestador
+INSERT INTO PRESTADOR_SERVICO ( NEGOCIANTE, CNH, EH_MONTADOR, TEMPO_EXP_MONT, TEMPO_EXP_TRANSP)
+    VALUES('47495856882', '12345678910', FALSE, NULL, 'P2Y');
+
+--Carlos Bife cadastrado como prestador
+INSERT INTO PRESTADOR_SERVICO ( NEGOCIANTE, CNH, EH_MONTADOR, TEMPO_EXP_MONT, TEMPO_EXP_TRANSP)
+    VALUES('48121548421','62849698919', TRUE, 'P10Y10M24D', 'P5Y6M');
 
 -- SERVICO
 
+-- Joao contratou serviço de Carlos Bife
 INSERT INTO SERVICO (CLIENTE, PRESTADOR_SERVICO, DATA_HORA, TEMPO_ESTIMADO)
-    VALUES()
-
+    VALUES('48487098819', '48121548421','2019-07-21 14:07:32-03', 'T1H');
+INSERT INTO SERVICO (CLIENTE, PRESTADOR_SERVICO, DATA_HORA, TEMPO_ESTIMADO)
+    VALUES('46975897859', '47495856882', '2019-10-21 10:10:42-03', 'T2H');
+INSERT INTO SERVICO (CLIENTE, PRESTADOR_SERVICO, DATA_HORA, TEMPO_ESTIMADO)
+    VALUES('49061357810', '22222222222', '2020-05-08 01:01:01-03', 'T1H');
+    
 -- VEICULO
-
+-- Veiculo do Marcelo (Prestador)
+-- Formato do Path (./photos/vehicles/[Placa_veiculo]-[Numero_foto].jpeg)
 INSERT INTO VEICULO (PLACA, PRESTADOR, MARCA, MODELO, ANO, FOTO1, FOTO2, FOTO3, FOTO4)
-    VALUES()
+    VALUES('ADE9123','47495856882', 'Volkswagen', 'Gol', 2000, './photos/vehicles/ade9123-1.jpeg', './photos/vehicles/ade9123-2.jpeg', './photos/vehicles/ade9123-3.jpeg', './photos/vehicles/ade9123-4.jpeg');
+-- Veiculo do Carlos Bife (Prestador)
+INSERT INTO VEICULO (PLACA, PRESTADOR, MARCA, MODELO, ANO, FOTO1)
+    VALUES('DEF8458', '48121548421', 'Fiat', 'Uno Mile', 1999, './photos/vehicles/def8458-1.jpeg');
+INSERT INTO VEICULO (PLACA, PRESTADOR, MARCA, MODELO, ANO, FOTO1, FOTO2)
+    VALUES('CAB1283', '48121548421', 'Volkswagen', 'Fusca', 1980, './photos/vehicles/cab1283-1.jpeg','./photos/vehicles/cab1283-2.jpeg');    
 
 -- VEICULO_INFO
 
-INSERT INTO VEICULO (MARCA, MODELO, NRO_EIXOS, CAPACIDADE)
-    VALUES()
+INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
+    VALUES('Gol', 2000, 2, 150.0);
+INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
+    VALUES('Uno Mile',1999, 1, 100.0);
+INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
+    VALUES('Fusca',1980, 1, 80.0);
 
 -- PRODUTO
 
-INSERT INTO PRODUTO (ID, VENDEDOR, NOME, MARCA, TIPO, QTD_ESTOQUE, PRECO, TEMPO_USO, ESTADO, DESCRICAO_GERAL, MATERIAL, REVESTIMENTO, VOLTAGEM, POTENCIA, VIDA_UTIL, EFICIENCIA_ENERGETICA, FOTO1, FOTO2, FOTO3, FOTO4)
-    VALUES()
+INSERT INTO PRODUTO (VENDEDOR, NOME, MARCA, TIPO, QTD_ESTOQUE, PRECO, TEMPO_USO, ESTADO, DESCRICAO_GERAL, MATERIAL, REVESTIMENTO, VOLTAGEM, POTENCIA, VIDA_UTIL, EFICIENCIA_ENERGETICA, FOTO1, FOTO2, FOTO3, FOTO4)
+    VALUES('48487098819', 'Geladeira', 'Brastemp', 'Eletrodomestico', 2, 500.00, 'P1Y', 'NOVO', 'Geladeira 2 portas, com freezer', NULL, NULL, 100, 200,'P5Y', 'E', './photos/products/joao/1', NULL, NULL, NULL);
+INSERT INTO PRODUTO (VENDEDOR, NOME, MARCA, TIPO, QTD_ESTOQUE, PRECO, TEMPO_USO, ESTADO, DESCRICAO_GERAL, MATERIAL, REVESTIMENTO, VOLTAGEM, POTENCIA, VIDA_UTIL, EFICIENCIA_ENERGETICA, FOTO1, FOTO2, FOTO3, FOTO4)
+    VALUES('11111111111', 'Armario', 'Casas Bahia', 'Imovel', 2, 500.00, 'P1M', 'NOVO', 'Armario com 10 gavetas', 'Pau Brasil', NULL, NULL, NULL, NULL, NULL, './photos/products/craqueneto/1', NULL, NULL, NULL);
 
 -- VENDA
 
 INSERT INTO VENDA (CLIENTE, PRODUTO, DATA_HORA, QUANTIDADE, VALOR_TOTAL)
-    VALUES()
-
-
+    VALUES('49061357810', 1, '2019-07-21 14:07:32-03', 1, 500.0);
+INSERT INTO VENDA (CLIENTE, PRODUTO, DATA_HORA, QUANTIDADE, VALOR_TOTAL)
+    VALUES('46975897859', 2, '2019-07-22 14:07:32-03', 1, 400.0);
+    

@@ -3,17 +3,15 @@ version: "3"
 services:
     postgres_db:
         build: .
+        restart: always
         ports:
             - "15432:5432"
-        environment:
-            POSTGRES_PASSWORD: "ribamar"
-        volumes:
-            - ./pg_data:/var/lib/postgresql/data
         networks:
             - postgres-compose-network
 
     admin:
         image: dpage/pgadmin4
+        restart: always
         environment:
             PGADMIN_DEFAULT_EMAIL: "admin@usp.br"
             PGADMIN_DEFAULT_PASSWORD: "admin"
