@@ -1,41 +1,41 @@
--- File used for populating the database with test data.
+﻿-- File used for populating the database with test data.
 
 -- CLIENTE
 -- Joao
 INSERT INTO CLIENTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL)
-    VALUES ('48487098819', 'joaoramosj@outlook.com', '2016-10-20 21:08:24-05', 'Joao Vitor Silva Ramos', '17996698335', '8/6/2000', 'senha123', './photos/joao.jpeg', NULL);
+    VALUES ('48487098819', 'joaoramosj@outlook.com', '2016-10-20 21:08:24-05', 'Joao Vitor Silva Ramos', '17996698335', '2000-08-06', 'senha123', './photos/joao.jpeg', NULL);
 -- Vitor
 INSERT INTO CLIENTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL)
-    VALUES ('49061357810', 'vitorsan@bd.com', '2018-08-21 22:08:25-03', 'Vitor Santana Cordeiro', '11947836937', '9/20/2000', 'vamopobackvitao', './photos/vitor.jpeg', 4.5);
+    VALUES ('49061357810', 'vitorsan@bd.com', '2018-08-21 22:08:25-03', 'Vitor Santana Cordeiro', '11947836937', '2000-09-20', 'vamopobackvitao', './photos/vitor.jpeg', 4.5);
 -- Marcelo 
 INSERT INTO CLIENTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL)
-    VALUES ('47495856882', 'marcelo@hotmail.com', '2016-09-22 22:05:12-03', 'Marcelo Moraes', '17996698335', '7/15/1999', 'fullstacko','./photos/marcelo.jpeg', 5.00);
+    VALUES ('47495856882', 'marcelo@hotmail.com', '2016-09-22 22:05:12-03', 'Marcelo Moraes', '17996698335', '1999-07-15', 'fullstacko','./photos/marcelo.jpeg', 5.00);
 -- Giovani
 INSERT INTO CLIENTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL)
-    VALUES ('46975897859', 'giovanilucafo@gmail.com', '2015-07-21 16:07:32-03', 'Giovani Decico Lucafo','19981216021','9/26/1900', 'coxinha26091997','./photos/giovani.jpeg', 4.20);
+    VALUES ('46975897859', 'giovanilucafo@gmail.com', '2015-07-21 16:07:32-03', 'Giovani Decico Lucafo','19981216021','1900-09-26', 'coxinha26091997','./photos/giovani.jpeg', 4.20);
 -- Craque Neto
 INSERT INTO CLIENTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL)
-    VALUES ('11111111111', 'craqueneto10@gmail.com', '2014-12-10 21:13:33-03', 'José Ferreira Neto','11999999999','9/9/1966', 'cabelodeboneca', './photos/craque_neto.jpeg', 2.0);
+    VALUES ('11111111111', 'craqueneto10@gmail.com', '2014-12-10 21:13:33-03', 'José Ferreira Neto','11999999999','1966-09-09', 'cabelodeboneca', './photos/craque_neto.jpeg', 2.0);
 
 -- NEGOCIANTE
 -- Joao (Locador, Vendedor)
 INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL, EH_PRESTADOR, EH_LOCADOR, EH_VENDEDOR)
-    VALUES ('48487098819', 'joaoramosj@outlook.com', '2016-10-20 22:08:24-05', 'Joao Vitor Silva Ramos', '17996698335', '8/6/2000', 'senha123', './photos/joao.jpeg', NULL, FALSE, TRUE, TRUE);
+    VALUES ('48487098819', 'joaoramosj@outlook.com', '2016-10-20 22:08:24-05', 'Joao Vitor Silva Ramos', '17996698335', '2000-08-06', 'senha123', './photos/joao.jpeg', NULL, FALSE, TRUE, TRUE);
 -- Craque neto (Locador, Vendedor)
 INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL, EH_PRESTADOR, EH_LOCADOR, EH_VENDEDOR)
-    VALUES ('11111111111', 'craqueneto10@gmail.com', '2014-12-10 21:50:53-03', 'José Ferreira Neto','11999999999','9/9/1966', 'cabelodeboneca', './photos/craque_neto.jpeg', 4.0, FALSE, TRUE, TRUE);
+    VALUES ('11111111111', 'craqueneto10@gmail.com', '2014-12-10 21:50:53-03', 'José Ferreira Neto','11999999999','1966-09-09', 'cabelodeboneca', './photos/craque_neto.jpeg', 4.0, FALSE, TRUE, TRUE);
 -- Kasalbe (Locador)
 INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL, EH_PRESTADOR, EH_LOCADOR, EH_VENDEDOR)
-    VALUES ('44455566677', 'kasalbe@usp.br', '2014-07-12 10:01:46-03', 'Otávio Polozzi Rodrigues', '1691234785', '8/20/1998', 'repsantacasa', './photos/kasalbe.jpeg', 3.8, FALSE, TRUE, FALSE);
+    VALUES ('44455566677', 'kasalbe@usp.br', '2014-07-12 10:01:46-03', 'Otávio Polozzi Rodrigues', '1691234785', '1998-08-20', 'repsantacasa', './photos/kasalbe.jpeg', 3.8, FALSE, TRUE, FALSE);
 -- Marcelo (Prestador, Locador, Vendedor)
 INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL, EH_PRESTADOR, EH_LOCADOR, EH_VENDEDOR)
-    VALUES ('47495856882', 'marcelo@hotmail.com', '2016-09-22 23:05:12-03', 'Marcelo Moraes', '17996698335', '7/15/1999', 'fullstacko','./photos/marcelo.jpeg', 1.00, TRUE, TRUE, TRUE);
+    VALUES ('47495856882', 'marcelo@hotmail.com', '2016-09-22 23:05:12-03', 'Marcelo Moraes', '17996698335', '1999-07-15', 'fullstacko','./photos/marcelo.jpeg', 1.00, TRUE, TRUE, TRUE);
 -- Carlos Bife (Prestador)
 INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL, EH_PRESTADOR, EH_LOCADOR, EH_VENDEDOR)
-    VALUES ('48121548421', 'carlosbife@hotmail.com', '2010-01-30 23:04:59-03', 'Carlos Bife', '19855515658', '4/22/1982', 'truco','./photos/bife.jpeg', 2.55, TRUE, FALSE, FALSE);
+    VALUES ('48121548421', 'carlosbife@hotmail.com', '2010-01-30 23:04:59-03', 'Carlos Bife', '19855515658', '1982-04-22', 'truco','./photos/bife.jpeg', 2.55, TRUE, FALSE, FALSE);
 -- Jorjão Montador (Prestador, Locador, Vendedor)
 INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL, EH_PRESTADOR, EH_LOCADOR, EH_VENDEDOR)
-    VALUES ('22222222222', 'jorjao_mont@uol.com', '2009-05-24 23:04:59-03', 'Jorjão Montador', '19866614557', '4/2/1968', 'truco','./photos/jorjao_montador.jpeg', 2.55, TRUE, TRUE, TRUE);
+    VALUES ('22222222222', 'jorjao_mont@uol.com', '2009-05-24 23:04:59-03', 'Jorjão Montador', '19866614557', '1968-04-02', 'truco','./photos/jorjao_montador.jpeg', 2.55, TRUE, TRUE, TRUE);
 
 -- AVALIACAO
 -- Cliente (X) Negociante: direcao da avaliacao definida pelo booleano "VEM_DO_CLIENTE" 
@@ -56,7 +56,7 @@ INSERT INTO AVALIACAO (CLIENTE, NEGOCIANTE, DATA_HORA, TEXTO, RESPOSTA, VEM_DO_C
     VALUES ('49061357810', '11111111111', '2018-10-23 20:11:10-03', 'ESSE CABELU DI BUNECA ME AVALIOU MAL!! COLOCOU 0 ESTRELAS PRA MIM SENDO QUE EU FIZ O SERVIÇO CERTINHO! PALHAÇADA!!!', 'Para de chorar, Neto! Você fez um serviço horrível, se liga! Isso só mostra o quanto você é infantil', FALSE, 0.0);
 -- Carlos Bife <- Vitor
 INSERT INTO AVALIACAO (CLIENTE, NEGOCIANTE, DATA_HORA, TEXTO, RESPOSTA, VEM_DO_CLIENTE, NOTA)
-    VALUES ('48121548421', '49061357810', '2019-10-20 20:08:12-05', 'Eu fui so fazer um trabalhinho na casa do vitor e ele nao parava de falar que ele era um estudante global sla.. acabou que o trabalho fico muito bem feito mas eu tava mesmo era com vtd de xinga ele', NULL, FALSE, 4.0);
+    VALUES ('49061357810', '48121548421', '2019-10-20 20:08:12-05', 'Eu fui so fazer um trabalhinho na casa do vitor e ele nao parava de falar que ele era um estudante global sla.. acabou que o trabalho fico muito bem feito mas eu tava mesmo era com vtd de xinga ele', NULL, FALSE, 4.0);
 -- Vitor -> Kazalbe
 INSERT INTO AVALIACAO (CLIENTE, NEGOCIANTE, DATA_HORA, TEXTO, RESPOSTA, VEM_DO_CLIENTE, NOTA)
     VALUES ('49061357810', '44455566677', '2019-11-02 20:10:12-03', 'Aluguei uma vaga da Rep. Santa Casa com o Kasalbé e ele foi muito atencioso! Mandou tudo certinho e agilizou bastante o processo! Nota 100 :)', 'Obrigado Vitão!! Um prazer fazer negócios com você.', TRUE, 5.0);
@@ -110,55 +110,55 @@ INSERT INTO IMOVEL (RUA, NUMERO, COMPLEMENTO, BAIRRO, CEP, CIDADE, LOCADOR, EH_P
 -- FOTO_IMOVEL
 -- Formato do Path (./photos/imovel/[idimovel].[numero_foto]) 
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO) 
     VALUES (1,'./photos/imovel/1.1');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO) 
     VALUES (1,'./photos/imovel/1.2');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO) 
     VALUES (1,'./photos/imovel/1.3');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO) 
     VALUES (2,'./photos/imovel/2.1');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO) 
     VALUES (2,'./photos/imovel/2.2');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO) 
     VALUES (2,'./photos/imovel/2.3');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO) 
     VALUES (2,'./photos/imovel/2.4');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO) 
     VALUES (3,'./photos/imovel/3.1');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO) 
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO) 
     VALUES (3,'./photos/imovel/3.2');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO)
     VALUES (4,'./photos/imovel/4.1');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO)
     VALUES (4,'./photos/imovel/4.2');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO)
     VALUES (4,'./photos/imovel/4.3');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO)
     VALUES (5,'./photos/imovel/5.1');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO)
     VALUES (5,'./photos/imovel/5.2');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO)
     VALUES (5,'./photos/imovel/5.3');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO)
     VALUES (5,'./photos/imovel/5.4');
 
-INSERT INTO FOTO_ALUGUEL (ID_IMOVEL, PATH_FOTO)
+INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO)
     VALUES (5,'./photos/imovel/5.5');
 
 -- ALUGUEL
@@ -243,11 +243,20 @@ INSERT INTO PRESTADOR_SERVICO ( NEGOCIANTE, CNH, EH_MONTADOR, TEMPO_EXP_MONT, TE
 
 -- Joao contratou serviço de Carlos Bife
 INSERT INTO SERVICO (CLIENTE, PRESTADOR_SERVICO, DATA_HORA, TEMPO_ESTIMADO)
-    VALUES('48487098819', '48121548421','2019-07-21 14:07:32-03', 'T1H');
+    VALUES('48487098819', '48121548421','2019-07-21 14:07:32-03', 'PT1H');
 INSERT INTO SERVICO (CLIENTE, PRESTADOR_SERVICO, DATA_HORA, TEMPO_ESTIMADO)
-    VALUES('46975897859', '47495856882', '2019-10-21 10:10:42-03', 'T2H');
+    VALUES('46975897859', '47495856882', '2019-10-21 10:10:42-03', 'PT2H');
 INSERT INTO SERVICO (CLIENTE, PRESTADOR_SERVICO, DATA_HORA, TEMPO_ESTIMADO)
-    VALUES('49061357810', '22222222222', '2020-05-08 01:01:01-03', 'T1H');
+    VALUES('49061357810', '22222222222', '2020-05-08 01:01:01-03', 'PT1H');
+
+-- VEICULO_INFO
+
+INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
+    VALUES('Gol', 2000, 2, 150.0);
+INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
+    VALUES('Uno Mile',1999, 1, 100.0);
+INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
+    VALUES('Fusca',1980, 1, 80.0);
     
 -- VEICULO
 -- Veiculo do Marcelo (Prestador)
@@ -260,19 +269,10 @@ INSERT INTO VEICULO (PLACA, PRESTADOR, MARCA, MODELO, ANO, FOTO1)
 INSERT INTO VEICULO (PLACA, PRESTADOR, MARCA, MODELO, ANO, FOTO1, FOTO2)
     VALUES('CAB1283', '48121548421', 'Volkswagen', 'Fusca', 1980, './photos/vehicles/cab1283-1.jpeg','./photos/vehicles/cab1283-2.jpeg');    
 
--- VEICULO_INFO
-
-INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
-    VALUES('Gol', 2000, 2, 150.0);
-INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
-    VALUES('Uno Mile',1999, 1, 100.0);
-INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
-    VALUES('Fusca',1980, 1, 80.0);
-
 -- PRODUTO
 
 INSERT INTO PRODUTO (VENDEDOR, NOME, MARCA, TIPO, QTD_ESTOQUE, PRECO, TEMPO_USO, ESTADO, DESCRICAO_GERAL, MATERIAL, REVESTIMENTO, VOLTAGEM, POTENCIA, VIDA_UTIL, EFICIENCIA_ENERGETICA, FOTO1, FOTO2, FOTO3, FOTO4)
-    VALUES('48487098819', 'Geladeira', 'Brastemp', 'Eletrodomestico', 2, 500.00, 'P1Y', 'NOVO', 'Geladeira 2 portas, com freezer', NULL, NULL, 100, 200,'P5Y', 'E', './photos/products/joao/1', NULL, NULL, NULL);
+    VALUES('48487098819', 'Geladeira', 'Brastemp', 'Eletronico', 2, 500.00, 'P1Y', 'NOVO', 'Geladeira 2 portas, com freezer', NULL, NULL, 100, 200,'P5Y', 'E', './photos/products/joao/1', NULL, NULL, NULL);
 INSERT INTO PRODUTO (VENDEDOR, NOME, MARCA, TIPO, QTD_ESTOQUE, PRECO, TEMPO_USO, ESTADO, DESCRICAO_GERAL, MATERIAL, REVESTIMENTO, VOLTAGEM, POTENCIA, VIDA_UTIL, EFICIENCIA_ENERGETICA, FOTO1, FOTO2, FOTO3, FOTO4)
     VALUES('11111111111', 'Armario', 'Casas Bahia', 'Imovel', 2, 500.00, 'P1M', 'NOVO', 'Armario com 10 gavetas', 'Pau Brasil', NULL, NULL, NULL, NULL, NULL, './photos/products/craqueneto/1', NULL, NULL, NULL);
 
