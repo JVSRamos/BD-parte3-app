@@ -15,7 +15,7 @@ IDEIAS PARA CONSULTAS:
 9 - V [MEDIA/ALTA] Me retorna todos os imoveis no bairro X que tenham o numero de vagas disponiveis + alugadas <= numero de quartos da casa * 2 (não quero dividir quarto com mais do que 1 pessoa) --> GB IdIMovel, Count -> IJ Imovel WHERE Bairro AND Condicao quartos 
 10 - V [GOSTEI DESSA] Me retorna todos os locadores não-proprietarios que estejam anunciando vagas tal que se voce pegar o preco total de todas essas vagas fica X vezes maior do que o preço do aluguel daquele imovel (ou seja, o cara da rep ta cobrando MUITO caro por vaga e é um mal negócio pra mim)
 11 - V [MÉDIA] Pegar todos os vendedores com avaliação geral maior que X e que a média do preço dos produtos vendidos é menor que Y
-12 - X [BAIXA/MEDIA] Me retorna todos os transportadores que tenham pelo menos um veiculo que tenha uma capacidade superior a X
+12 - V [BAIXA/MEDIA] Me retorna todos os transportadores que tenham pelo menos um veiculo que tenha uma capacidade superior a X
 13 - [MEDIA] Me retorna todos negociantes que responderam a TODAS as denuncias feitas a ele e tenha uma avaliação geral superior a X (esse cara é atencioso para resolvers problemas e tem uma boa nota, provalvemente vou querer fazer negocio com ele)
 14 - [MEDIA 2 IJ E SE PAH UM CNQ OU GROUPBY] Consultar todos os donos de republica (nao proprietarios do imovel) que estão oferecendo x vagas, que possuem avaliação geral maior que 4, e que sejam do bairro y.
 15 - V [MEDIA/ALTA] Tempo médio de um serviço feito por todos os prestadores que trabalham APENAS como uma categoria(OU montador OU transportador) e com tempo de experiencia menor que 1 ano.
