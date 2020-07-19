@@ -11,3 +11,5 @@ Para conseguir construir a base de dados com sucesso, siga as seguintes instruç
 3. Espere ele dar "ok" para todas as partes que formam a "network". Assim que tudo estiver certo, já pode começar a interagir com o banco!
 
 _OBS: configuramos o Docker para já executar os scripts "schema" e "data-setup" (que estão dentro da pasta "init_sql") antes de liberar o acesso ao banco, então você já poderá se conectar com um banco populado sem precisar tocar nos arquivos sql ou mexer no psql!_
+
+Para usufruir da interface gráfica, basta rodar o comando `python3 interface.py` (você deve ter a biblioteca "tkinter" instalada).

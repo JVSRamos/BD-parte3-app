@@ -1,8 +1,7 @@
 import psycopg2
 
+
 # Insert the new data on the database
-
-
 def insert(veic):
 
     con = None
@@ -31,13 +30,15 @@ def insert(veic):
         print("Database Error: ", error)
         return "Erro na consulta das infromações do modelo e ano do veículo"
 
-    if(v_info == None):
+    if v_info == None:
         insert_query = "INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE) VALUES (%s,%s,%s,%s)"
+        # Estamos deixando hardcoded por simplicidade. Na aplicação real, popularíamos a tabela
+        # "VEICULO_INFO" com dados de uma API para evitar que esse tipo de situação acontecesse
         data_to_insert = [veic["modelo"], veic["ano"], 2, 1000]
         cursor.execute(insert_query, data_to_insert)
         con.commit()
 
-    # Inserting the veiculo
+    # Inserting the vehicle
     insert_query = " INSERT INTO VEICULO (PLACA, PRESTADOR, MARCA, MODELO, ANO, FOTO1, FOTO2, FOTO3, FOTO4) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s);"
     data_to_insert = []
     data_to_insert = [value for key, value in veic.items()]

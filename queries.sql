@@ -1,5 +1,4 @@
--- File used for making medium/high complexity queries to our database,
--- following directives given in the specification.
+-- File used for making medium/high complexity queries to our database, following directives given in the specification.
 
 -- Q1:
 /*
@@ -286,5 +285,3 @@ SELECT N.NOME, N.EMAIL, N.TELEFONE, EXTRACT(YEAR FROM AGE(NOW(), N.DATA_NASCIMEN
         SELECT AVG(AGE(NOW(), N2.DATA_NASCIMENTO)) 
             FROM NEGOCIANTE N2 JOIN PRESTADOR_SERVICO P2 ON N2.CPF = P2.NEGOCIANTE
     );
-
-

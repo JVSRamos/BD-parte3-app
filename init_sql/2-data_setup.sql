@@ -19,6 +19,7 @@ INSERT INTO CLIENTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO
     VALUES ('11111111111', 'craqueneto10@gmail.com', '2014-12-10 21:13:33-03', 'José Ferreira Neto','11999999999','1966-09-09', 'cabelodeboneca', './photos/craque_neto.jpeg', 2.0);
 
 
+
 /* ================================= NEGOCIANTE ================================= */
 
 -- Joao (Locador, Vendedor)
@@ -42,6 +43,7 @@ INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIME
 -- Joao2 (Vendedor) 
 INSERT INTO NEGOCIANTE (CPF, EMAIL, DATA_INSCRICAO, NOME, TELEFONE, DATA_NASCIMENTO, SENHA, FOTO, AVALIACAO_GERAL, EH_PRESTADOR, EH_LOCADOR, EH_VENDEDOR)
     VALUES ('33333333333', 'joao2@uol.com', '2009-05-24 23:04:59-03', 'Joao Vitor Silva Ramos', '19866614557', '1968-04-02', 'novasenha','./photos/joao2.jpeg', 4.5, FALSE, FALSE, TRUE);
+
 
 
 /* ================================= AVALIACAO ================================= */
@@ -76,6 +78,8 @@ INSERT INTO AVALIACAO (CLIENTE, NEGOCIANTE, DATA_HORA, TEXTO, RESPOSTA, VEM_DO_C
 INSERT INTO AVALIACAO (CLIENTE, NEGOCIANTE, DATA_HORA, TEXTO, RESPOSTA, VEM_DO_CLIENTE, NOTA)
     VALUES ('46975897859', '44455566677', '2019-11-02 20:10:12-03', 'Aluguei uma vaga da Rep. Santa Casa com o Kasalbé e ele foi muito atencioso! Mandou tudo certinho e agilizou bastante o processo! Nota 100 :)', 'Obrigado Vitão!! Um prazer fazer negócios com você.', TRUE, 4.5);
 
+
+
 /* ================================= DENUNCIA ================================= */
 
 -- Cliente [?] Negociante: direcao da avaliacao definida pelo booleano "VEM_DO_CLIENTE" 
@@ -94,6 +98,7 @@ INSERT INTO DENUNCIA (CLIENTE, NEGOCIANTE, DATA_HORA, TEXTO, RESPOSTA, VEM_DO_CL
     VALUES ('46975897859', '48121548421', '2019-1-30 11:11:11-03', 'Esse cara é um machista, fico contando umas historia dessa vida porca dele no meio do serviço e eu senti a obrigação de expor esse palhaço', NULL, TRUE);
 
 
+
 /* ================================= CONVERSA ================================= */
 
 -- Joao e Carlos Bife
@@ -108,6 +113,7 @@ INSERT INTO CONVERSA (CLIENTE, NEGOCIANTE, DATA_HORA, LOG_CONVERSA)
 -- Giovani e Kazalbe  
 INSERT INTO CONVERSA (CLIENTE, NEGOCIANTE, DATA_HORA, LOG_CONVERSA)
     VALUES ('46975897859' , '44455566677', '2019-12-12 11:11:11-03', './chat_logs/2019-12-12_11:11:11-03.log');
+
 
 
 /* ================================= IMOVEL ================================= */
@@ -129,9 +135,8 @@ INSERT INTO IMOVEL (RUA, NUMERO, COMPLEMENTO, BAIRRO, CEP, CIDADE, LOCADOR, EH_P
     VALUES ('Rua Episcopal', 2220, NULL, 'Centro', '11111111', 'São Carlos','48487098819', FALSE, 2399.99, 108.9, 4, 2, 2, 'Nova Republica Saint Charles: Casa com bastante espaço, 4 quartos com um cachorro, o flasco #MoreEmRep');
 
 
-/* ================================= FOTO_IMOVEL ================================= */
 
--- Formato do Path (./photos/imovel/[idimovel].[numero_foto]) 
+/* ================================= FOTO_IMOVEL ================================= */
 
 -- Imovel do Marcelo
 INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO) 
@@ -186,6 +191,7 @@ INSERT INTO FOTO_IMOVEL (ID_IMOVEL, PATH_FOTO)
     VALUES (5,'./photos/imovel/5.5');
 
 
+
 /* ================================= ALUGUEL ================================= */
 
 -- Giovani alugando APARTAMENTO de Marcelo (proprietario)
@@ -197,6 +203,7 @@ INSERT INTO ALUGUEL (CLIENTE, ID_IMOVEL, DATA_INICIO, DATA_TERMINO, DURACAO, DES
 -- Joao alugando APARTAMENTO de Kasalbe (proprietario)
 INSERT INTO ALUGUEL (CLIENTE, ID_IMOVEL, DATA_INICIO, DATA_TERMINO, DURACAO, DESCRICAO, CUSTO_RESCISAO_INTEGRAL) 
     VALUES ('48487098819', 4, '2018-02-02 04:05:05-03', NULL, NULL, 'Aluguel - Minimo 1 ano de aluguel - 2399.99 reais/mes incluso gás',400000);
+
 
 
 /* =================================== VAGA =================================== */
@@ -218,9 +225,8 @@ INSERT INTO VAGA (ID_IMOVEL, NUMERO_VAGA, DESCRICAO, PRECO)
     VALUES(5, 2, 'Quarto localizado na parte interna da casa, perto da cozinha', 600.0);
 
 
-/* ================================= FOTO_VAGA ================================= */
 
--- Formato do Path (./photos/vaga/[idimovel].[numerovaga].[numero_foto])
+/* ================================= FOTO_VAGA ================================= */
 
 --Imovel[3] - Vaga[1] - 2 fotos
 INSERT INTO FOTO_VAGA ( ID_IMOVEL, NUMERO_VAGA, PATH_FOTO)
@@ -247,6 +253,7 @@ INSERT INTO FOTO_VAGA ( ID_IMOVEL, NUMERO_VAGA, PATH_FOTO)
     VALUES(3, 2,'./photos/vaga/5.2.1');
 
 
+
 /* ================================= ACORDO ================================== */
 
 -- Vitor alugando VAGA [1] de Craque Neto
@@ -255,6 +262,7 @@ INSERT INTO ACORDO ( CLIENTE, ID_IMOVEL, NUMERO_VAGA, DATA_INICIO, DATA_TERMINO,
 -- Marcelo alugando VAGA [2] de Craque Neto
 INSERT INTO ACORDO ( CLIENTE, ID_IMOVEL, NUMERO_VAGA, DATA_INICIO, DATA_TERMINO, DURACAO, TERMOS, CUSTO_RECISAO_ORIGINAL)
     VALUES('47495856882', 3, 2, '2020-01-01 01:01:01-03', '2020-03-11 01:01:01-03', 'P2M10D' ,'Manter a limpeza do proprio quarto, respeitar as regras da republica e acima de tudo que o alcool esteja com voce', NULL); 
+
 
 
 /* ============================= PRESTADOR_SERVICO ============================= */
@@ -274,6 +282,7 @@ INSERT INTO PRESTADOR_SERVICO ( NEGOCIANTE, CNH, EH_MONTADOR, TEMPO_EXP_MONT, TE
     VALUES('48121548421','62849698919', TRUE, 'P10Y10M24D', 'P5Y6M');
 
 
+
 /* ================================= SERVICO ================================= */
 
 -- Joao contratou serviço de Carlos Bife
@@ -285,10 +294,10 @@ INSERT INTO SERVICO (CLIENTE, PRESTADOR_SERVICO, DATA_HORA, TEMPO_ESTIMADO)
 -- Vitor contratou servico de Jorjao Montador
 INSERT INTO SERVICO (CLIENTE, PRESTADOR_SERVICO, DATA_HORA, TEMPO_ESTIMADO)
     VALUES('49061357810', '22222222222', '2020-05-08 01:01:01-03', 'PT1H');
--- TESTE LINHA 40
 -- Vitor contratou servico de Jorjao Montador
 INSERT INTO SERVICO (CLIENTE, PRESTADOR_SERVICO, DATA_HORA, TEMPO_ESTIMADO)
     VALUES('49061357810', '22222222222', '2020-06-08 01:01:01-03', 'PT2H');
+
 
 
 /* ============================= VEICULO_INFO ================================ */
@@ -300,10 +309,9 @@ INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
 INSERT INTO VEICULO_INFO (MODELO, ANO, NRO_EIXOS, CAPACIDADE)
     VALUES('Fusca', 1980, 1, 80.0);
     
+
     
 /* ================================ VEICULO ================================== */
-
--- Formato do Path (./photos/vehicles/[Placa_veiculo]-[Numero_foto].jpeg)
 
 -- Veiculo do Marcelo (Transportador)
 INSERT INTO VEICULO (PLACA, PRESTADOR, MARCA, MODELO, ANO, FOTO1, FOTO2, FOTO3, FOTO4)
@@ -314,6 +322,7 @@ INSERT INTO VEICULO (PLACA, PRESTADOR, MARCA, MODELO, ANO, FOTO1)
 -- Veiculo do Carlos Bife (Transportador)
 INSERT INTO VEICULO (PLACA, PRESTADOR, MARCA, MODELO, ANO, FOTO1, FOTO2)
     VALUES('CAB1283', '48121548421', 'Volkswagen', 'Fusca', 1980, './photos/vehicles/cab1283-1.jpeg','./photos/vehicles/cab1283-2.jpeg');    
+
 
 
 /* ================================= PRODUTO ================================= */
